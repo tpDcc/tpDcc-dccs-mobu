@@ -1,0 +1,4 @@
+include tpDcc/dccs/mobu/__logging__.ini
+recursive-include tpDcc/dccs/mobu/resources/* *.*
+include versioneer.py
+include tpDcc/dccs/mobu/_version.py
