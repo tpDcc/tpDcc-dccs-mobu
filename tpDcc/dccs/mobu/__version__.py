@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-Version module for tpDcc-dccs-maya
+Version module for tpDcc-dccs-mobu
 """
 
 from __future__ import print_function, division, absolute_import
