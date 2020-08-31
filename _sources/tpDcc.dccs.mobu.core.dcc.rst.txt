@@ -1,0 +1,7 @@
+tpDcc.dccs.mobu.core.dcc module
+===============================
+
+.. automodule:: tpDcc.dccs.mobu.core.dcc
+   :members:
+   :undoc-members:
+   :show-inheritance:

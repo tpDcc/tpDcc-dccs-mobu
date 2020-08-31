@@ -1,0 +1,7 @@
+tpDcc.dccs.mobu.core.take module
+================================
+
+.. automodule:: tpDcc.dccs.mobu.core.take
+   :members:
+   :undoc-members:
+   :show-inheritance:

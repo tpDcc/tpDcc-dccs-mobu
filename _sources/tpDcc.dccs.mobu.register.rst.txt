@@ -1,0 +1,7 @@
+tpDcc.dccs.mobu.register module
+===============================
+
+.. automodule:: tpDcc.dccs.mobu.register
+   :members:
+   :undoc-members:
+   :show-inheritance:

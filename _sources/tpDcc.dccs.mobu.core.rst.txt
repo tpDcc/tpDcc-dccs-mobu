@@ -1,0 +1,23 @@
+tpDcc.dccs.mobu.core package
+============================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   tpDcc.dccs.mobu.core.dcc
+   tpDcc.dccs.mobu.core.gui
+   tpDcc.dccs.mobu.core.helpers
+   tpDcc.dccs.mobu.core.menu
+   tpDcc.dccs.mobu.core.scene
+   tpDcc.dccs.mobu.core.take
+
+Module contents
+---------------
+
+.. automodule:: tpDcc.dccs.mobu.core
+   :members:
+   :undoc-members:
+   :show-inheritance:

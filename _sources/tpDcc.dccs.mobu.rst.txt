@@ -1,0 +1,27 @@
+tpDcc.dccs.mobu package
+=======================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   tpDcc.dccs.mobu.core
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   tpDcc.dccs.mobu.loader
+   tpDcc.dccs.mobu.register
+
+Module contents
+---------------
+
+.. automodule:: tpDcc.dccs.mobu
+   :members:
+   :undoc-members:
+   :show-inheritance:
