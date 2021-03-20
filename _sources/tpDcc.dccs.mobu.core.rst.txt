@@ -7,7 +7,6 @@ Submodules
 .. toctree::
    :maxdepth: 4
 
-   tpDcc.dccs.mobu.core.dcc
    tpDcc.dccs.mobu.core.gui
    tpDcc.dccs.mobu.core.helpers
    tpDcc.dccs.mobu.core.menu

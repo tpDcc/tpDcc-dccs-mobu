@@ -15,8 +15,8 @@ Submodules
 .. toctree::
    :maxdepth: 4
 
+   tpDcc.dccs.mobu.dcc
    tpDcc.dccs.mobu.loader
-   tpDcc.dccs.mobu.register
 
 Module contents
 ---------------
