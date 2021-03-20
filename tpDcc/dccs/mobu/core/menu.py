@@ -7,9 +7,11 @@ Module that contains functions and classes related with MotionBuilder menus
 
 from __future__ import print_function, division, absolute_import
 
+import logging
+
 from pyfbsdk import FBMenuManager
 
-import tpDcc.dccs.mobu as mobu
+logger = logging.getLogger('tpDcc-dccs-mobu')
 
 
 def get_menu_manager():
@@ -89,7 +91,7 @@ def add_item(item_name, command, parent_menu_path=None):
                 break
             i = i + 1
 
-        mobu.logger.warning(
+        logger.warning(
             "Mobu menus do not handle sibling items with the same label. Label {} has been changed to {}.".format(
                 origin_name, item_name))
 
@@ -103,7 +105,7 @@ def add_item(item_name, command, parent_menu_path=None):
     def create_item_callback(item_label, item_command):
         def _function(control, event, lbl=item_label, cmd=item_command):
             if event.Name == lbl:
-                exec cmd
+                exec(cmd)
         return _function
 
     parent_menu.OnMenuActivate.Add(create_item_callback(item_name, command))

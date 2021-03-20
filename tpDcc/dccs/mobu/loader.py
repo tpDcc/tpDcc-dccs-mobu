@@ -11,9 +11,8 @@ import os
 import inspect
 import logging
 
-import tpDcc.register as core_register
-from tpDcc.dccs.mobu import register
-from tpDcc.dccs.mobu.core import dcc
+from tpDcc.core import dcc
+from tpDcc.managers import resources
 
 # =================================================================================
 
@@ -56,6 +55,7 @@ def create_logger(dev=False):
 
     logging.config.fileConfig(logging_config, disable_existing_loggers=False)
     logger = logging.getLogger(PACKAGE.replace('.', '-'))
+    dev = os.getenv('TPDCC_DEV', dev)
     if dev:
         logger.setLevel(logging.DEBUG)
         for handler in logger.handlers:
@@ -70,14 +70,9 @@ def init_dcc(dev=False):
     :param dev: bool, Whether to launch code in dev mode or not
     """
 
-    if dev:
-        register.cleanup()
-        register_classes()
-
     register_resources()
 
-    logger = create_logger(dev=dev)
-    register.register_class('logger', logger)
+    create_logger(dev=dev)
 
 
 def register_resources():
@@ -85,28 +80,5 @@ def register_resources():
     Registers tpDcc.libs.qt resources path
     """
 
-    import tpDcc
-
-    resources_manager = tpDcc.ResourcesMgr()
     resources_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'resources')
-    resources_manager.register_resource(resources_path, key=tpDcc.Dccs.Maya)
-
-
-def register_classes():
-    core_register.register_class('Dcc', dcc.MobuDcc)
-    # core_register.register_class('DccProgressBar', dcc.MayaProgessBar)
-    # core_register.register_class('Callbacks', callback.MayaCallback)
-    # core_register.register_class('Menu', menu.MayaMenu)
-    # core_register.register_class('Shelf', shelf.MayaShelf)
-    # core_register.register_class('Completer', completer.MayaCompleter)
-    # core_register.register_class('Dialog', dialog.MayaDialog)
-    # core_register.register_class('OpenFileDialog', dialog.MayaOpenFileDialog)
-    # core_register.register_class('SaveFileDialog', dialog.MayaSaveFileDialog)
-    # core_register.register_class('SelectFolderDialog', dialog.MayaSelectFolderDialog)
-    # core_register.register_class('NativeDialog', dialog.MayaNativeDialog)
-    # core_register.register_class('Window', window.MayaWindow)
-    # core_register.register_class('DockWindow', window.MayaWindow)
-    # core_register.register_class('SubWindow', window.MayaWindow)
-
-
-register_classes()
+    resources.register_resource(resources_path, key=dcc.Dccs.MotionBuilder)
