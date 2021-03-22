@@ -1,0 +1,7 @@
+tpDcc.dccs.mobu.ui.window module
+================================
+
+.. automodule:: tpDcc.dccs.mobu.ui.window
+   :members:
+   :undoc-members:
+   :show-inheritance:

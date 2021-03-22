@@ -1,0 +1,18 @@
+tpDcc.dccs.mobu.ui package
+==========================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   tpDcc.dccs.mobu.ui.window
+
+Module contents
+---------------
+
+.. automodule:: tpDcc.dccs.mobu.ui
+   :members:
+   :undoc-members:
+   :show-inheritance:
