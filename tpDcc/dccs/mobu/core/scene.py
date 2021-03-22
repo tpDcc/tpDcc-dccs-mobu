@@ -47,3 +47,4 @@ def get_selected_nodes():
     selected_nodes_count = selected_nodes.GetCount()
 
     return selected_nodes, selected_nodes_count
+

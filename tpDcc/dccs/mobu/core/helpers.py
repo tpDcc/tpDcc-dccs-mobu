@@ -20,7 +20,7 @@ def get_mobu_version():
 
     supported_versions = [i for i in range(2000, 2100)]
     for v in supported_versions:
-        if v in path.__file__:
+        if str(v) in path:
             return v
 
     return None
